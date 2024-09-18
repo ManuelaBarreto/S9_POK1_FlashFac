@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+#back-to-menu {
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 17%;
+    width: 1%;
+}
+
+#home-button {
+    background-color: #4A90E2;
+    padding: 12px 20px;
+    transition: opacity 1s ease; /* Animação de transição */
+}
+
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+#logo {
+    width: 650px;
+}
+
+#words-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; /* Ocupará o restante da página */
+    width: 100%;
+    padding: 20px;
+    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
+    transition: opacity 1s ease; /* Animação de transição */
+}
+
+.words-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    flex-grow: 1;
+}
+
+.random-word-Salut {
+    position: absolute;
+    font-size: 24px;
+    color: #2c3e50;
+    opacity: 0;
+}
+
+.random-word-Olá {
+    position: absolute;
+    font-size: 24px;
+    color: #F7CA18;
+    opacity: 0;
+}
+
+/* Inicialmente, os botões estão escondidos */
+#buttons-container {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease; /* Animação de transição para fade in */
+    position: absolute; /* Para sobrepor o container de palavras */
+    top: 35%; /* Ajuste conforme necessário para garantir que ocupe o espaço certo */
+    width: 50%;
+    height: 40%;
+
+}
+
+button {
+    border: black;
+    border-radius: 20px;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: #ffffff;
+}
+
+#btn_pt, #btn_pt_manag_eco, #btn_pt_sust_ethics, #btn_fr_manag_eco, #btn_fr_sust_ethics {
+    background-color: #4A90E2;
+}
+
+#btn_fr, #btn_pt_physics, #btn_pt_programming, #btn_fr_physics, #btn_fr_programming {
+    background-color: #F5A623;
+}
+
+
+#LearnFrench-page, #LearnPortuguese-page {
+    display: none; /* Mudar para grid no js */
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* Ocupará o restante da página */
+    width: 100%;
+    margin-top: 3.5% ;
+    padding-inline: 15%;
+    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
+}
+
+.ask-field {
+    font-size: large;
+}
+
+#field-selection-LearnFrench, #field-selection-LearnPortuguese{
+    display: grid; /* Mudar para grid no js */
+    grid-template-columns: 1fr 1fr; /* 2 colunas de igual tamanho */
+    grid-template-rows: 1fr 1fr;    /* 2 linhas de igual tamanho */
+    gap: 10px;
+    height: 100%; /* Ocupará o restante da página */
+    width: 100%;
+    margin-top: 3% ;
+}
+
+.field-selector {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selector_img {
+    width: 15%;
+    margin: 2%;
+}

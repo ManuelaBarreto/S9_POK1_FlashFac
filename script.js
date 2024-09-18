@@ -1,21 +1,21 @@
-// Função para mover a logo para o topo e iniciar as palavras aleatórias
+// Fonction permettant de déplacer le logo vers le haut et de lancer des mots aléatoires
 function animateLogo() {
     const logoContainer = document.getElementById('logo-container');
     const logoImage = document.getElementById('logo');
     
-    // Animação para mover a logo para o topo e reduzir o tamanho
-    logoContainer.style.height = '5%';  // Muda o tamanho do container para mover a logo para o topo
+    // Animation pour déplacer le logo vers le haut et réduire sa taille
+    logoContainer.style.height = '5%'; 
     logoContainer.style.transition = 'all 2s ease-in-out';
-    logoImage.style.width = '250px';  // Reduz o tamanho da logo
+    logoImage.style.width = '250px'; 
     logoImage.style.transition = 'all 2s ease-in-out'
 
-    // Troca a imagem da logo após ela se mover e reduzir de tamanho
-    setTimeout(() => {
-        logoImage.src = './Assets/FlashFac (1).png'; // Troca para a nova imagem
-    }, 2000); // Tempo para trocar a imagem após a logo reduzir
+    // Modifie l'image du logo après qu'il ait été déplacé
+    setTimeout(function(){
+        logoImage.src = './Assets/FlashFac (1).png';
+    }, 2000);
     
-    // Após a animação da logo, iniciar as palavras aleatórias
-    setTimeout(displayRandomWords, 1500); // espera 1s para iniciar as palavras
+    // Après l'animation du logo, lancer les mots aléatoires
+    setTimeout(displayRandomWords, 1500);
 }
 
 // Função para exibir palavras aleatoriamente em dois containers
@@ -50,12 +50,12 @@ function displayRandomWords() {
                 // Calcula o atraso total para essa palavra
                 const startDelay = index * delayInterval;
 
-                setTimeout(() => {
+                setTimeout(function(){
                     // Muda a opacidade para 1 (visível)
                     wordDiv.style.opacity = '1';
 
                     // Depois de 2 segundos, volta a opacidade para 0 (invisível)
-                    setTimeout(() => {
+                    setTimeout(function(){
                         wordDiv.style.opacity = '0';
                     }, displayDuration); // 2 segundos de exibição
 
@@ -97,82 +97,82 @@ function setupButtonHoverEffects() {
     const btn_fr_sust_ethics = document.getElementById('btn_fr_sust_ethics');
     
     // btn_pt
-    btn_pt.addEventListener('mouseover', () => {
+    btn_pt.addEventListener('mouseover', function(){
         btn_pt.textContent = 'Je suis lusophone et je vais étudier dans une université francophone'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_pt.addEventListener('mouseout', () => {
+    btn_pt.addEventListener('mouseout', function(){
         btn_pt.textContent = 'Eu falo a língua portuguesa e vou estudar em uma universidade de língua francesa'; // Texto original quando o mouse sai
     });
     
     // btn_fr
-    btn_fr.addEventListener('mouseover', () => {
+    btn_fr.addEventListener('mouseover', function(){
         btn_fr.textContent = 'Eu falo a língua francesa e vou estudar em uma universidade de língua portuguesa.'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_fr.addEventListener('mouseout', () => {
+    btn_fr.addEventListener('mouseout', function(){
         btn_fr.textContent = 'Je suis francophone et je vais étudier dans une université lusophone'; // Texto original quando o mouse sai
     });
 
     // btn_pt_manag_eco
-    btn_pt_manag_eco.addEventListener('mouseover', () => {
+    btn_pt_manag_eco.addEventListener('mouseover', function(){
         btn_pt_manag_eco.textContent = 'Gestão e Economia'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_pt_manag_eco.addEventListener('mouseout', () => {
+    btn_pt_manag_eco.addEventListener('mouseout', function(){
         btn_pt_manag_eco.textContent = 'Management et Économie'; // Texto original quando o mouse sai
     });
 
     // btn_fr_manag_eco
-    btn_fr_manag_eco.addEventListener('mouseover', () => {
+    btn_fr_manag_eco.addEventListener('mouseover', function(){
         btn_fr_manag_eco.textContent = 'Management et Économie'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_fr_manag_eco.addEventListener('mouseout', () => {
+    btn_fr_manag_eco.addEventListener('mouseout', function(){
         btn_fr_manag_eco.textContent = 'Gestão e Economia'; // Texto original quando o mouse sai
     });
 
     // btn_pt_physics
-    btn_pt_physics.addEventListener('mouseover', () => {
+    btn_pt_physics.addEventListener('mouseover', function(){
         btn_pt_physics.textContent = 'Física'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_pt_physics.addEventListener('mouseout', () => {
+    btn_pt_physics.addEventListener('mouseout', function(){
         btn_pt_physics.textContent = 'Physique'; // Texto original quando o mouse sai
     });
 
     // btn_fr_physics
-    btn_fr_physics.addEventListener('mouseover', () => {
+    btn_fr_physics.addEventListener('mouseover', function(){
         btn_fr_physics.textContent = 'Physique'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_fr_physics.addEventListener('mouseout', () => {
+    btn_fr_physics.addEventListener('mouseout', function(){
         btn_fr_physics.textContent = 'Física'; // Texto original quando o mouse sai
     });
 
     // btn_pt_programming
-    btn_pt_programming.addEventListener('mouseover', () => {
+    btn_pt_programming.addEventListener('mouseover', function(){
         btn_pt_programming.textContent = 'Informática'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_pt_programming.addEventListener('mouseout', () => {
+    btn_pt_programming.addEventListener('mouseout', function(){
         btn_pt_programming.textContent = 'Informatique'; // Texto original quando o mouse sai
     });
 
     // btn_fr_programming
-    btn_fr_programming.addEventListener('mouseover', () => {
+    btn_fr_programming.addEventListener('mouseover', function(){
         btn_fr_programming.textContent = 'Informatique'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_fr_programming.addEventListener('mouseout', () => {
+    btn_fr_programming.addEventListener('mouseout', function(){
         btn_fr_programming.textContent = 'Informática'; // Texto original quando o mouse sai
     });
 
     // btn_pt_sust_ethics
-    btn_pt_sust_ethics.addEventListener('mouseover', () => {
+    btn_pt_sust_ethics.addEventListener('mouseover', function(){
         btn_pt_sust_ethics.textContent = 'Sustentabilidade e Ética'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_pt_sust_ethics.addEventListener('mouseout', () => {
+    btn_pt_sust_ethics.addEventListener('mouseout', function(){
         btn_pt_sust_ethics.textContent = 'Développement Durable et Éthique'; // Texto original quando o mouse sai
     });
 
     // btn_fr_sust_ethics
-    btn_fr_sust_ethics.addEventListener('mouseover', () => {
+    btn_fr_sust_ethics.addEventListener('mouseover', function(){
         btn_fr_sust_ethics.textContent = 'Développement Durable et Éthique'; // Novo texto quando o mouse passa sobre o botão
     });
-    btn_fr_sust_ethics.addEventListener('mouseout', () => {
+    btn_fr_sust_ethics.addEventListener('mouseout', function(){
         btn_fr_sust_ethics.textContent = 'Sustentabilidade e Ética'; // Texto original quando o mouse sai
     });
 }
@@ -188,21 +188,21 @@ function setupButtonAction() {
     const buttons_container = document.getElementById('buttons-container')
     const words_sections = document.getElementById('words-sections')
     
-    btn_pt.addEventListener('click', () => {
+    btn_pt.addEventListener('click', function(){
         LearnFrench_page.style.display = 'flex'; // faz aparecer a seção
         back_to_menu.style.display = 'flex'; // Mostra o botão de ir ao menu
         buttons_container.style.display = 'none'; // faz desaparecer a seção
         words_sections.style.display = 'none'; // faz desaparecer a seção
     });
     
-    btn_fr.addEventListener('click', () => {
+    btn_fr.addEventListener('click', function(){
         LearnPortuguese_page.style.display = 'flex'; // faz aparecer a seção
         back_to_menu.style.display = 'flex'; // Mostra o botão de ir ao menu
         buttons_container.style.display = 'none'; // faz desaparecer a seção
         words_sections.style.display = 'none'; // faz desaparecer a seção
     });
 
-    btn_home.addEventListener('click', () => {
+    btn_home.addEventListener('click', function(){
         buttons_container.style.display = 'flex'; // faz desaparecer a seção
         back_to_menu.style.display = 'none'; // Mostra o botão de ir ao menu
         LearnFrench_page.style.display = 'none'; // faz aparecer a seção

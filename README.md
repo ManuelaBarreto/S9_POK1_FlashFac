@@ -5,7 +5,7 @@ title: "FlashFac"
 authors:
   - Manuela BARRETO
 
-date: 2024-09-05
+date: 2024-10-16
 
 tags:
   - "temps 1"
@@ -24,7 +24,7 @@ GitHub du POK: https://github.com/ManuelaBarreto/S9_POK1_FlashFac
 
 {% endlien %}
 
-Création d'un site web de flashcards de vocabulaire en français pour les universitaires étrangers
+Création d'un site web de flashcards de vocabulaire en français et portuguais pour les universitaires étrangers
 
 ## Objectif
 
@@ -99,7 +99,7 @@ J'ai ensuite réfléchi à une phrase d'accroche qui capterait l'essence du proj
 
 Le choix des couleurs a également été crucial. En m'appuyant sur la théorie des couleurs, j’ai opté pour une combinaison de **bleu et de jaune**.
 
-![Théorie des couleurs](./assets/Theorie_des_couleurs.jpg)
+![Théorie des couleurs](./Assets/Theorie_des_couleurs.jpg)
 
 Le bleu évoque le professionnalisme, la confiance et la clarté, tandis que le jaune symbolise l’optimisme et la créativité. Ensemble, ces couleurs créent une identité visuelle à la fois dynamique et sérieuse.
 

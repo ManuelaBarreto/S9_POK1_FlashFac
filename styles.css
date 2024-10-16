@@ -106,7 +106,7 @@ button {
     background-color: #4A90E2;
 }
 
-#btn_fr, #btn_pt_physics, #btn_pt_programming, #btn_fr_physics, #btn_fr_programming {
+#btn_fr, #btn_pt_physics, #btn_pt_programming, #btn_fr_physics, #btn_fr_programming, #example-btn-fr, #example-btn-pt {
     background-color: #F5A623;
 }
 
@@ -145,4 +145,104 @@ button {
 .selector_img {
     width: 15%;
     margin: 2%;
+}
+
+#FlashCardsFrench-page, #FlashCardsPortuguese-page{
+    display: none; /* Mudar para flex no js */
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%; /* Ocupará o restante da página */
+    width: 100%;
+    margin-top: 3.5% ;
+    padding-inline: 15%;
+    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border: 2px solid #1a73e8;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.arrow {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#left-arrow-fr, #left-arrow-pt {
+    left: -50px;
+}
+
+#right-arrow-fr, #right-arrow-pt {
+    right: -50px;
+}
+
+.help-sentence-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.help-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+#example-sentence-fr, #example-sentence-pt {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#example-sentence p {
+    color:#ffffff;
+}
+
+.flashcard-container {
+    perspective: 1000px; /* Necessário para criar o efeito 3D */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flashcard-fr, #flashcard-pt {
+    width: 500px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d; /* Habilita a rotação 3D */
+    transition: transform 0.6s ease-in-out; /* Suaviza a animação */
+    cursor: pointer;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Esconde a face traseira quando a frente está visível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: rgb(2, 2, 2);
+    padding: 20px;
+    text-align: center;
+}
+
+.back {
+    transform: rotateY(180deg); /* Inicia o verso virado */
+}
+
+.flipped {
+    transform: rotateY(180deg); /* Quando "flipped", o card gira 180 graus */
 }

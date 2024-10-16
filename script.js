@@ -265,49 +265,49 @@ function setupButtonAction() {
     btn_fr_manag_eco.addEventListener('click', function(){
         LearnFrench_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsFrench_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataFr('management_economy.json');
+        loadThemeDataFr('./management_economy.json');
     });
 
     btn_fr_physics.addEventListener('click', function(){
         LearnFrench_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsFrench_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataFr('physics.json');
+        loadThemeDataFr('./physics.json');
     });
 
     btn_fr_programming.addEventListener('click', function(){
         LearnFrench_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsFrench_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataFrTESTE('programming.json');
+        loadThemeDataFr('./programming.json');
     });
 
     btn_fr_sust_ethics.addEventListener('click', function(){
         LearnFrench_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsFrench_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataFrTESTE('sustainability_ethics.json');
+        loadThemeDataFr('./sustainability_ethics.json');
     });
 
     btn_pt_manag_eco.addEventListener('click', function(){
         LearnPortuguese_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsPortuguese_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataPtTESTE('management_economy.json');
+        loadThemeDataPt('./management_economy.json');
     });
 
     btn_pt_physics.addEventListener('click', function(){
         LearnPortuguese_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsPortuguese_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataPtTESTE('physics.json');
+        loadThemeDataPt('./physics.json');
     });
 
     btn_pt_programming.addEventListener('click', function(){
         LearnPortuguese_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsPortuguese_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataPtTESTE('programming.json');
+        loadThemeDataPt('./programming.json');
     });
 
     btn_pt_sust_ethics.addEventListener('click', function(){
         LearnPortuguese_page.style.display = 'none'; // faz desaparecer a seção
         FlashCardsPortuguese_page.style.display = 'flex'; // faz aparecer a seção
-        loadThemeDataPtTESTE('sustainability_ethics.json');
+        loadThemeDataPt('./sustainability_ethics.json');
     });
 
     left_arrow_fr.addEventListener('click', function() {
@@ -379,23 +379,28 @@ function loadThemeDataFr(json_file) {
             return response.json();
         })
         .then(data => {
-            words = Object.keys(response); // Pegando as chaves (palavras) do JSON
-            values = Object.values(response);
-            currentIndex = 0; 
-            console.log(words); // Use os dados conforme necessário
-            console.log(values);
+            words = Object.keys(data); // Pegando as chaves (palavras) do JSON
+            values = Object.values(data);
+            currentIndex = 0;
             updateWordFr(); // Atualiza a tela com a primeira palavra
         });
 }
 
-function loadThemeDataFrTESTE() {
-    themeData = JSON.parse(jsonData);
-    words = Object.keys(themeData);
-    values = Object.values(themeData);
+function loadThemeDataPt(json_file) {
+    words = [];
+    values = [];
     currentIndex = 0;
-    console.log(words); // Use os dados conforme necessário
-    console.log(values);
-    updateWordFr();
+    // Exemplo de requisição de arquivo JSON
+    fetch(json_file) // Certifique-se de que o caminho para o JSON está correto
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            words = Object.keys(data); // Pegando as chaves (palavras) do JSON
+            values = Object.values(data);
+            currentIndex = 0;
+            updateWordPt(); // Atualiza a tela com a primeira palavra
+        });
 }
 
 // Função para atualizar o termo exibido
@@ -405,17 +410,6 @@ function updateWordFr() {
 
 }
 
-function loadThemeDataPtTESTE() {
-    themeData = JSON.parse(jsonData);
-    words = Object.keys(themeData);
-    values = Object.values(themeData);
-    currentIndex = 0;
-    console.log(words); // Use os dados conforme necessário
-    console.log(values);
-    updateWordPt();
-}
-
-// Função para atualizar o termo exibido
 function updateWordPt() {
     document.getElementById('word-front-pt').innerText = values[currentIndex][0];
     document.getElementById('example-sentence-pt').style.color = '#ffffff'

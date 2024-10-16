@@ -1,3 +1,4 @@
+/*css général*/
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,28 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+button {
+    border: black;
+    border-radius: 20px;
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    color: #ffffff;
+}
+
+/*css boutons*/
+
+#btn_pt, #btn_pt_manag_eco, #btn_pt_sust_ethics, #btn_fr_manag_eco, #btn_fr_sust_ethics {
+    background-color: #4A90E2;
+}
+
+#btn_fr, #btn_pt_physics, #btn_pt_programming, #btn_fr_physics, #btn_fr_programming, #example-btn-fr, #example-btn-pt {
+    background-color: #F5A623;
+}
+
+/*css button "HOME"*/
+
 #back-to-menu {
     display: none;
     position: absolute;
@@ -25,31 +48,34 @@ body, html {
 #home-button {
     background-color: #4A90E2;
     padding: 12px 20px;
-    transition: opacity 1s ease; /* Animação de transição */
+    transition: opacity 1s ease; /* Animation de transition */
 }
 
+/*css logo*/
 
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda a altura da tela */
+    height: 100vh;
 }
 
 #logo {
     width: 650px;
 }
 
+/*css random words*/
+
 #words-sections {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100%; /* Ocupará o restante da página */
+    height: 100%; /* Il occupera le reste de la page */
     width: 100%;
     padding: 20px;
-    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
-    transition: opacity 1s ease; /* Animação de transição */
+    position: relative; /* Ajoute une position relative pour l'effet de superposition */
+    transition: opacity 1s ease; /* Animation de transition */
 }
 
 .words-container {
@@ -76,7 +102,8 @@ body, html {
     opacity: 0;
 }
 
-/* Inicialmente, os botões estão escondidos */
+/*css page incial*/
+/* Initialement cachée */
 #buttons-container {
     display: none;
     flex-direction: column;
@@ -84,42 +111,25 @@ body, html {
     padding: 20px;
     text-align: center;
     opacity: 1;
-    transition: opacity 1s ease; /* Animação de transição para fade in */
-    position: absolute; /* Para sobrepor o container de palavras */
-    top: 35%; /* Ajuste conforme necessário para garantir que ocupe o espaço certo */
+    transition: opacity 1s ease; /* Animation de transition */
+    position: absolute; /* Pour écraser le container des mots */
+    top: 35%;
     width: 50%;
     height: 40%;
 
 }
 
-button {
-    border: black;
-    border-radius: 20px;
-    padding: 14px 40px;
-    font-size: 16px;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    color: #ffffff;
-}
-
-#btn_pt, #btn_pt_manag_eco, #btn_pt_sust_ethics, #btn_fr_manag_eco, #btn_fr_sust_ethics {
-    background-color: #4A90E2;
-}
-
-#btn_fr, #btn_pt_physics, #btn_pt_programming, #btn_fr_physics, #btn_fr_programming, #example-btn-fr, #example-btn-pt {
-    background-color: #F5A623;
-}
-
+/*css page choix vocabulaire*/
 
 #LearnFrench-page, #LearnPortuguese-page {
-    display: none; /* Mudar para grid no js */
+    display: none;
     flex-direction: column;
     align-items: center;
-    height: 100%; /* Ocupará o restante da página */
+    height: 100%; /*Il occupera le reste de la page*/
     width: 100%;
     margin-top: 3.5% ;
     padding-inline: 15%;
-    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
+    position: relative; /* Ajoute une position relative pour l'effet de superposition */
 }
 
 .ask-field {
@@ -127,11 +137,11 @@ button {
 }
 
 #field-selection-LearnFrench, #field-selection-LearnPortuguese{
-    display: grid; /* Mudar para grid no js */
-    grid-template-columns: 1fr 1fr; /* 2 colunas de igual tamanho */
-    grid-template-rows: 1fr 1fr;    /* 2 linhas de igual tamanho */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*2 colonnes de taille égale*/
+    grid-template-rows: 1fr 1fr;    /*2 lignes de taille égale*/
     gap: 10px;
-    height: 100%; /* Ocupará o restante da página */
+    height: 100%; /*Il occupera le reste de la page*/
     width: 100%;
     margin-top: 3% ;
 }
@@ -147,15 +157,17 @@ button {
     margin: 2%;
 }
 
+/*css page FlashCards*/
+
 #FlashCardsFrench-page, #FlashCardsPortuguese-page{
-    display: none; /* Mudar para flex no js */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
-    height: 100%; /* Ocupará o restante da página */
+    height: 100%; /* Il occupera le reste de la page */
     width: 100%;
     margin-top: 3.5% ;
     padding-inline: 15%;
-    position: relative; /* Adiciona posição relativa para o efeito de sobreposição */
+    position: relative; /* Ajoute une position relative pour l'effet de superposition */
 }
 
 .card-container {
@@ -210,7 +222,7 @@ button {
 }
 
 .flashcard-container {
-    perspective: 1000px; /* Necessário para criar o efeito 3D */
+    perspective: 1000px; /* Nécessaire pour créer l'effet 3D */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,8 +232,8 @@ button {
     width: 500px;
     height: 250px;
     position: relative;
-    transform-style: preserve-3d; /* Habilita a rotação 3D */
-    transition: transform 0.6s ease-in-out; /* Suaviza a animação */
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
     cursor: pointer;
 }
 
@@ -229,7 +241,7 @@ button {
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Esconde a face traseira quando a frente está visível */
+    backface-visibility: hidden; /* Cache la face arrière lorsque la face avant est visible */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,9 +252,9 @@ button {
 }
 
 .back {
-    transform: rotateY(180deg); /* Inicia o verso virado */
+    transform: rotateY(180deg);
 }
 
 .flipped {
-    transform: rotateY(180deg); /* Quando "flipped", o card gira 180 graus */
+    transform: rotateY(180deg);
 }
